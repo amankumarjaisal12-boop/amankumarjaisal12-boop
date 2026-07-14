@@ -1,0 +1,167 @@
+/* Design Variables Pipeline Configurations */
+:root {
+    --primary-color: #008080;
+    --primary-gradient: linear-gradient(135deg, #008080, #00b3b3);
+    --dark-color: #1a202c;
+    --light-color: #f7fafc;
+    --white: #ffffff;
+    --text-color: #4a5568;
+    --border-color: #e2e8f0;
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Systemic State Configurations (Injected Programmatically by script.js) */
+[data-theme="dark"] {
+    --primary-color: #1abc9c;
+    --primary-gradient: linear-gradient(135deg, #1abc9c, #16a085);
+    --dark-color: #f7fafc;
+    --light-color: #1a202c;
+    --white: #2d3748;
+    --text-color: #cbd5e0;
+    --border-color: #4a5568;
+}
+
+/* Structural Reset Matrix */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Atomic Layout Containers */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+    letter-spacing: -0.5px;
+}
+
+/* Navigation Layout Layer via Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 32, 44, 0.98);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+.logo span { color: var(--primary-color); }
+.nav-links { display: flex; list-style: none; gap: 35px; }
+.nav-links li a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.2s ease; }
+.nav-links li a:hover { color: var(--primary-color); }
+.theme-btn { background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; transition: transform 0.2s; }
+.theme-btn:hover { transform: scale(1.1); }
+
+/* Split-Hero Presentation Scaffolding */
+.hero-section {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 40px 5%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 60px;
+}
+
+.hero-text { flex: 1.2; animation: transformAlphaIn 0.8s ease; }
+.welcome-tag { display: inline-block; padding: 6px 14px; background: rgba(0, 128, 128, 0.1); color: var(--primary-color); font-weight: 600; border-radius: 50px; font-size: 0.85rem; margin-bottom: 20px; }
+.hero-text h1 { font-size: 3.8rem; line-height: 1.15; margin-bottom: 20px; color: var(--dark-color); letter-spacing: -1.5px; }
+.highlight { background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-text p { font-size: 1.25rem; margin-bottom: 35px; max-width: 580px; color: var(--text-color); }
+.hero-buttons { display: flex; gap: 20px; }
+
+/* Image Framing Architecture With Abstract Blobs */
+.hero-image { flex: 0.8; display: flex; justify-content: center; align-items: center; animation: transformAlphaIn 1s ease; }
+.image-frame { position: relative; width: 360px; height: 360px; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; overflow: hidden; background: var(--primary-gradient); box-shadow: var(--card-shadow); transition: border-radius 0.4s ease-in-out; }
+.image-frame:hover { border-radius: 50%; }
+.image-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Buttons System UI */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; font-size: 1rem; font-weight: 600; border-radius: 6px; text-decoration: none; cursor: pointer; transition: all 0.2s ease; }
+.btn-primary { background: var(--primary-gradient); color: #fff; border: none; box-shadow: 0 4px 14px rgba(0, 128, 128, 0.25); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 128, 128, 0.35); }
+.btn-outline { background: transparent; border: 2px solid var(--border-color); color: var(--dark-color); }
+.btn-outline:hover { background: var(--light-color); border-color: var(--primary-color); color: var(--primary-color); }
+.btn-block { width: 100%; justify-content: center; }
+
+/* Content Section Layout Configurations */
+.about-box { text-align: center; max-width: 800px; margin: auto; }
+.about-box p { font-size: 1.2rem; margin-bottom: 30px; }
+
+/* Grid Implementations for Portfolio Components */
+.skills-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+.skill-card, .project-card { background: var(--white); padding: 40px 30px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--card-shadow); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+.skill-card:hover, .project-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+.skill-icon { font-size: 2.8rem; margin-bottom: 20px; }
+.skill-card h3, .project-card h3 { font-size: 1.4rem; color: var(--dark-color); margin-bottom: 12px; }
+
+.project-card { display: flex; flex-direction: column; justify-content: space-between; }
+.project-tag { display: inline-block; align-self: flex-start; padding: 4px 10px; background: var(--light-color); color: var(--primary-color); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 4px; margin-bottom: 15px; }
+.project-card p { font-size: 0.95rem; margin-bottom: 25px; flex-grow: 1; }
+.project-link { color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+
+/* Data Capture Form Styling Rules */
+.contact-section { max-width: 650px; }
+.contact-form .form-group { margin-bottom: 20px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--white); color: var(--dark-color); transition: border-color 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-color); }
+
+footer { background: #1a202c; color: #a0aec0; text-align: center; padding: 30px; font-size: 0.9rem; border-top: 1px solid #2d3748; }
+
+/* Keyframe Layout Transformations */
+@keyframes transformAlphaIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* System Breakpoint Media Scaling Matrix */
+@media (max-width: 992px) {
+    .hero-container { flex-direction: column-reverse; text-align: center; gap: 40px; padding: 40px 0; }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-text p { margin: 0 auto 30px auto; }
+    .hero-buttons { justify-content: center; }
+    .image-frame { width: 280px; height: 280px; }
+}
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; padding: 15px; }
+    .nav-links { gap: 20px; }
+}

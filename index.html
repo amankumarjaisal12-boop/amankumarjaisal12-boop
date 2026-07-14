@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Kumar Jaisal | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fixed: Working Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="logo">My<span> Portfolio</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle UI Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="welcome-tag">Open for Freelance & Internships</span>
+                <h1>Hi, I am <span class="highlight">Aman Kumar Jaisal</span></h1>
+                <p>A passionate web developer and NIELIT O-Level aspirant. I specialize in building responsive, user-friendly web layouts and modern web applications.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Hire Me <i class="fas fa-arrow-right"></i></a>
+                    <a href="#projects" class="btn btn-outline">View Work</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-frame">
+                    <!-- Fixed: Better Fallback Image Link -->
+                    <img src="aman.png" alt="Aman Kumar Jaisal Profile" onerror="this.src='https://unsplash.com'">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-box">
+            <p>I am a web designer holding an ADCA certification and currently pursuing NIELIT O-Level. I have successfully completed <strong>M1-R5 (IT Tools & Network Basics)</strong> and <strong>M2-R5 (Web Designing & Publishing)</strong>. I focus on writing clean, semantic HTML5, modern CSS3, and standard-compliant code to build great user experiences.</p>
+            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills & Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+                    <h3>HTML5</h3>
+                    <p>Creating semantic web structures for better SEO and accessibility.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt skill-icon" style="color: #264de4;"></i>
+                    <h3>CSS3 & Flexbox</h3>
+                    <p>Designing modern, fluid, and fully responsive layouts for all screen sizes.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js skill-icon" style="color: #f0db4f;"></i>
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>Adding interactivity, form validations, and dynamic data handling.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server skill-icon" style="color: #008080;"></i>
+                    <h3>IT Fundamentals</h3>
+                    <p>Strong understanding of network protocols, operating systems, and office tools (ADCA).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-tag">E-Commerce</div>
+                <h3>Static Storefront Grid</h3>
+                <p>A multi-page marketplace layout designed purely using CSS Grid and Flexbox without any external frameworks.</p>
+                <a href="#" class="project-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="project-card">
+                <div class="project-tag">JavaScript Application</div>
+                <h3>Dynamic Assessment Tool</h3>
+                <p>An interactive quiz web app designed for student assessment, utilizing dynamic JavaScript validations.</p>
+                <a href="#" class="project-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="container contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <!-- Fixed: Simplified Placeholders -->
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Project details or message..." required></textarea>
+                </div>
+                <!-- Fixed: Professional Button Text -->
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Meta Block -->
+    <footer>
+        <p>&copy; 2026 Aman Kumar Jaisal | Designed according to NIELIT standards.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
